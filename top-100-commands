@@ -1,1 +1,10 @@
-/home/ansible/containerz-wolrd/finale_kubernetes/book-shelf/top-100-commands
+1. docker run -d -p 8080:8080 phelun/myapp_chpt2:latest
+2. kubectl run kubia --image=luksa/kubia --port=8080 --generator=run/v1 # one-liner pod spinner 
+3. sudo yum install centos-release-scl -y ; sudo yum install rh-python36 -y ; sudo scl enable rh-python36 bash ; sudo yum groupinstall 'Development Tools' -y
+4. alias k=kubectl
+5. export KUBE_EDITOR="/usr/bin/nano"
+6. kubectl delete rc kubia --cascade=false -- deletes rc but retains pods unmanaged though 
+7. kubectl scale job multi-completion-batch-job --replicas 3 -- change a Job’s parallelism property while the Job is running
+8. kubectl exec kubia-878lb -- curl -s http://10.104.228.134 # Connect to internal pod using service static IP 
+9. kcd='kubectl config set-context $(kubectl config current-context) --namespace '
+10. 
