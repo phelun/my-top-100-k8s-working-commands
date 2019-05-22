@@ -6,5 +6,9 @@
 6. kubectl delete rc kubia --cascade=false -- deletes rc but retains pods unmanaged though 
 7. kubectl scale job multi-completion-batch-job --replicas 3 -- change a Job’s parallelism property while the Job is running
 8. kubectl exec kubia-878lb -- curl -s http://10.104.228.134 # Connect to internal pod using service static IP 
-9. kcd='kubectl config set-context $(kubectl config current-context) --namespace '
-10. 
+9. alias kcd='kubectl config set-context $(kubectl config current-context) --namespace '
+10. kubectl exec kubia-drb7t env  # List pod environemt variable 
+11. kubectl exec -it kubia-drb7t bash # Just like your docker bash interactive, gets u onto the container in a pod
+12. kubectl get nodes -o jsonpath='{.items[*].status.addresses[?(@.type=="ExternalIP")].address}' # listing out nodes external IP one-liner  https://kubernetes.io/docs/reference/kubectl/jsonpath/
+13. k get pods --all-namespaces -o wide # list of pods all namespaces
+14. kcd kube-system ; k exec kube-dns-86f4d74b45-cjbz6 env # see env varables for the dns server in the cluster 
