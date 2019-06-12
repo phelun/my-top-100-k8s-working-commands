@@ -17,3 +17,5 @@
 17. kubectl run dnsutils --image=tutum/dnsutils --generator=run-pod/v1 --command -- sleep infinity
 18. kubectl port-forward fortune 8080:80 # not sure how this woorks yet :) 
 19. kubectl -n kube-system logs tiller-deploy-5cf8586c77-gkkcw --follow # Trail tiller if troubleshooting
+20. alias kcontext='kubectl config get-contexts ' # List contexts 
+21. alias kswitch='kubectl config use-context '   # switch context 
