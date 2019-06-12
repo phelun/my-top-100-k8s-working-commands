@@ -19,3 +19,4 @@
 19. kubectl -n kube-system logs tiller-deploy-5cf8586c77-gkkcw --follow # Trail tiller if troubleshooting
 20. alias kcontext='kubectl config get-contexts ' # List contexts 
 21. alias kswitch='kubectl config use-context '   # switch context 
+22. kubectl config unset contexts.fmbah # Delete/unset contexts --> fmbah = contexts name
