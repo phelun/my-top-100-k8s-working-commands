@@ -16,3 +16,4 @@
 16. kubectl exec kubia-2r1qb -- touch /var/ready # simple touch command on a running container in a pod 
 17. kubectl run dnsutils --image=tutum/dnsutils --generator=run-pod/v1 --command -- sleep infinity
 18. kubectl port-forward fortune 8080:80 # not sure how this woorks yet :) 
+19. kubectl -n kube-system logs tiller-deploy-5cf8586c77-gkkcw --follow # Trail tiller if troubleshooting
