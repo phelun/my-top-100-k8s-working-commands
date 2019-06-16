@@ -24,3 +24,4 @@
 24. docker build -t helm-hello-world .
 25. docker tag latest phelun/helm-hello-world
 26. docker push phelun/helm-hello-world:latest 
+27. helm del --purge vault-consul-dev00 --tls
