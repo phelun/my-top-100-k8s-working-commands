@@ -20,3 +20,7 @@
 20. alias kcontext='kubectl config get-contexts ' # List contexts 
 21. alias kswitch='kubectl config use-context '   # switch context 
 22. kubectl config unset contexts.fmbah # Delete/unset contexts --> fmbah = contexts name
+23. docker login
+24. docker build -t helm-hello-world .
+25. docker tag latest phelun/helm-hello-world
+26. docker push phelun/helm-hello-world:latest 
