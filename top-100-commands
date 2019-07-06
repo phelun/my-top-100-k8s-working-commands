@@ -39,3 +39,5 @@
     - k replace -f kubia-deployment-v2.yaml
     - k set image deployment kubia nodejs=luksa/kubia:v2
 36. k create -f deployment --record # Record flag takes history of deployment/revision values to help u rollback accordingly
+37. k rollout history deployment kubia # Shows you deployment history 
+38. k rollout undo deployment kubia --to-revision=1 # rollsback to specific revision 
