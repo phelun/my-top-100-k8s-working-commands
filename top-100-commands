@@ -30,4 +30,12 @@
 30. k get po --v 6 # Verbosely run kubectl commands, let you see the requests kubectl is sending to the API server.
 31. k delete rc --all 
 32. kubectl rollout status deployment kubia
-33. kubectl patch deployment kubia -p '{"spec": {"minReadySeconds": 10}}' #SlowDown RollingUpdate strategy: Patches the spec block of a dep
+33. kubectl patch deployment kubia -p '{"spec": {"minReadySeconds": 10}}' #SlowDown RollingUpdate strategy: Patches the spec block of a deployment. Appended it to the top of the spec block 
+34. kubectl set image deployment kubia nodejs=luksa/kubia:v2 # instead of k edit deployment 
+35. Ways of editing deployment 
+    - k edit pod_name 
+    - k patch deployment kubia -p '{"spec": {"template": {"spec": {"containers": [{"name": "nodejs", "image": "luksa/kubia:v2"}]}}}}  
+    - k apply -f kubia-deployment-v2.yaml 
+    - k replace -f kubia-deployment-v2.yaml
+    - k set image deployment kubia nodejs=luksa/kubia:v2
+36. k create -f deployment --record # Record flag takes history of deployment/revision values to help u rollback accordingly
