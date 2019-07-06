@@ -25,4 +25,9 @@
 25. docker tag latest phelun/helm-hello-world
 26. docker push phelun/helm-hello-world:latest 
 27. helm del --purge vault-consul-dev00 --tls
-28. kubectl rolling-update kubia-v1 kubia-v2 --image=luksa/kubia:v2 # Rolling update oneliner, though deprecated: replaces RC 
+28. kubectl rolling-update kubia-v1 kubia-v2 --image=luksa/kubia:v2 # Rolling update oneliner: replaces RC -- issue: kubectl vs master
+29. while true; do curl http://aa71f30009fc111; sleep 2; done # Loop through curl 
+30. k get po --v 6 # Verbosely run kubectl commands, let you see the requests kubectl is sending to the API server.
+31. k delete rc --all 
+32. kubectl rollout status deployment kubia
+33. kubectl patch deployment kubia -p '{"spec": {"minReadySeconds": 10}}' #SlowDown RollingUpdate strategy: Patches the spec block of a dep
