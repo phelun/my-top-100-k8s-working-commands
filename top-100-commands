@@ -41,3 +41,4 @@
 36. k create -f deployment --record # Record flag takes history of deployment/revision values to help u rollback accordingly
 37. k rollout history deployment kubia # Shows you deployment history 
 38. k rollout undo deployment kubia --to-revision=1 # rollsback to specific revision 
+39. kubectl rollout pause/resume deployment kubia # simulating canary deploy manually. 
