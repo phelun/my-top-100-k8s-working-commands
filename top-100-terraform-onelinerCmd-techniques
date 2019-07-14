@@ -8,6 +8,9 @@
 4. The <<-EOF and EOF are Terraform’s heredoc syntax
 5. Remove all spaces hwen defining user_data
 6. <PROVIDER>_<TYPE>.<NAME>.<ATTRIBUTE> # Tf refference expresion e.g  ${aws_security_group.example_sg.id} aka implicit dependency 
+7. https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html # secure aws resources
+8. https://gist.github.com/willurd/5720255 # list of oneliner webserver
+9. https://www.airpair.com/aws/posts/building-a-scalable-web-app-on-amazon-web-services-p1 # More aws best practises
 
 
 
