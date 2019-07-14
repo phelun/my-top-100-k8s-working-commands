@@ -4,7 +4,8 @@
 2.resource "<PROVIDER>_<TYPE>" "<NAME>" {
     [CONFIG ...]
   } #  TF general syntax 
-3. 
+3. terraform init # Dowloads a providers code/plugin to your project 
+4. The <<-EOF and EOF are Terraform’s heredoc syntax
 
 
 
