@@ -1,5 +1,10 @@
 # terraform init 
 ######################################
+1. use repo to setup vim for terraform https://github.com/hashivim/vim-terraform/blob/master/.editorconfig
+2.resource "<PROVIDER>_<TYPE>" "<NAME>" {
+    [CONFIG ...]
+  } #  TF general syntax 
+3. 
 
 
 
